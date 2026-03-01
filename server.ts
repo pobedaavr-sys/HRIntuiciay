@@ -69,19 +69,22 @@ async function startServer() {
   // HR: Import Vacancy from HH.ru or Text
   app.post('/api/hr/vacancies/import', async (req, res) => {
     const { url, text } = req.body;
-    let contentToParse = text;
-
-    if (url) {
-      // In a real app, we'd fetch the URL content here.
-      // For this demo, we'll simulate it or just ask Gemini to "imagine" it if it's a known site like HH.ru
-      contentToParse = `Вакансия по ссылке: ${url}`;
-    }
-
+    
     try {
+      let prompt = '';
+      let config: any = { responseMimeType: "application/json" };
+
+      if (url) {
+        prompt = `Extract vacancy details (title, description, requirements) from this URL: ${url}. Return as JSON with keys: name, description, requirements. Language: Russian.`;
+        config.tools = [{ urlContext: {} }];
+      } else {
+        prompt = `Extract vacancy details (title, description, requirements) from the following text. Return as JSON with keys: name, description, requirements. Language: Russian. Content: ${text}`;
+      }
+
       const response = await ai.models.generateContent({
         model: "gemini-3-flash-preview",
-        contents: `Extract vacancy details (title, description, requirements) from the following content. Return as JSON with keys: name, description, requirements. Content: ${contentToParse}`,
-        config: { responseMimeType: "application/json" }
+        contents: prompt,
+        config
       });
       
       const result = JSON.parse(response.text || '{}');

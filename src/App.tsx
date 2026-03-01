@@ -92,7 +92,7 @@ const LandingPage = () => {
       <nav className="p-6 flex justify-between items-center max-w-7xl mx-auto">
         <div className="flex items-center gap-2">
           <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">И</div>
-          <span className="text-xl font-bold text-slate-900 tracking-tight">HR Интуиция</span>
+          <span className="text-xl font-bold text-slate-900 tracking-tight">Ваш удаленный HR отдел</span>
         </div>
         <div className="flex gap-4">
           <Button variant="ghost" onClick={() => navigate('/tests')}>Библиотека тестов</Button>
@@ -111,8 +111,8 @@ const LandingPage = () => {
             <BrainCircuit size={14} /> AI-ПЛАТФОРМА ДЛЯ РЕКРУТИНГА
           </div>
           <h1 className="text-7xl font-extrabold text-slate-900 leading-[1] mb-6 tracking-tight">
-            Найм без <br />
-            <span className="text-indigo-600 italic font-serif">HR-отдела</span>
+            Ваш удаленный <br />
+            <span className="text-indigo-600 italic font-serif">HR-отдел</span>
           </h1>
           <p className="text-xl text-slate-600 mb-8 max-w-lg leading-relaxed">
             Тестируйте кандидатов за 15 минут. AI-анализ с вердиктом: нанимать или нет. 
@@ -380,14 +380,14 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold">И</div>
-            <span className="text-white font-bold">HR Интуиция</span>
+            <span className="text-white font-bold">Ваш удаленный HR отдел</span>
           </div>
           <div className="flex gap-8 text-sm">
             <a href="#" className="hover:text-white transition-colors">Политика конфиденциальности</a>
             <a href="#" className="hover:text-white transition-colors">Оферта</a>
             <a href="#" className="hover:text-white transition-colors">Контакты</a>
           </div>
-          <div className="text-sm">© 2026 HR Интуиция. Все права защищены.</div>
+          <div className="text-sm">© 2026 Ваш удаленный HR отдел. Все права защищены.</div>
         </div>
       </footer>
     </div>
@@ -604,7 +604,7 @@ const CandidateTest = () => {
       <div className="bg-white border-b p-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-xs">И</div>
-          <div className="font-bold text-slate-900">HR Интуиция</div>
+          <div className="font-bold text-slate-900">Ваш удаленный HR отдел</div>
         </div>
         <div className="flex items-center gap-6">
           <div className="text-sm text-slate-500 hidden sm:block">
@@ -761,7 +761,7 @@ const TestCatalog = () => {
       <nav className="p-6 flex justify-between items-center max-w-7xl mx-auto">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/')}>
           <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">И</div>
-          <span className="text-xl font-bold text-slate-900 tracking-tight">HR Интуиция</span>
+          <span className="text-xl font-bold text-slate-900 tracking-tight">Ваш удаленный HR отдел</span>
         </div>
         <div className="flex gap-4 items-center">
           <BackButton />
@@ -1626,7 +1626,7 @@ const HRDashboard = () => {
       <aside className="w-64 bg-white border-r border-slate-200 flex flex-col">
         <div className="p-6 font-bold text-xl flex items-center gap-2">
           <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white text-sm">И</div>
-          HR Интуиция
+          Ваш удаленный HR отдел
         </div>
         <nav className="flex-1 px-4 space-y-1">
           {tabs.map(tab => (
@@ -2148,7 +2148,7 @@ const CandidateResults = () => {
         </div>
 
         <div className="text-center pt-8">
-          <p className="text-slate-400 text-sm mb-4">Это автоматизированный отчет, подготовленный системой HR Интуиция.</p>
+          <p className="text-slate-400 text-sm mb-4">Это автоматизированный отчет, подготовленный системой Ваш удаленный HR отдел.</p>
           <Button variant="ghost" onClick={() => window.location.href = '/'}>Вернуться на главную</Button>
         </div>
       </div>
